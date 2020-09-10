@@ -51,6 +51,7 @@ app.post('/login/user', function(req, res){
     console.log(req.body)
     var username = req.body.UID;
     var password = req.body.PASS;
+    console.log(username)
 
     cloudant.use('patients').find({selector: {user_id: username}}).then((data) => {
         if(data && data.docs && data.docs.length > 0) {

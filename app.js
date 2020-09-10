@@ -47,6 +47,8 @@ app.get('/', function (_, res) {
 });
 
 app.post('/login/user', function(req, res){
+    console.log('/login/user')
+    console.log(req.body)
     var username = req.body.UID;
     var password = req.body.PASS;
 
